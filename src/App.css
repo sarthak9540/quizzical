@@ -62,10 +62,21 @@ label {
   border: 1px solid #4d5b9e;
   border-radius: 16px;
   padding: 4px 16px;
+  transition: all 0.1s;
 }
 
 hr {
   border: 1px solid #dbdef0;
+}
+
+.sumbitted-info-content {
+  display: flex;
+  gap: 24px;
+  align-items: baseline;
+}
+
+.score-info {
+  font-weight: 700;
 }
 
 .quiz-button {
