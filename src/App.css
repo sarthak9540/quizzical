@@ -2,6 +2,7 @@
 .blob-blue {
   position: absolute;
   transition: transform 0.5s;
+  z-index: -1;
 }
 
 .blob-yellow {

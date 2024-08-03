@@ -47,14 +47,6 @@ function App() {
     setStarted(true);
   }
 
-  // function handleSubmit() {
-  //   setSubmitted(true);
-  // }
-
-  // function handleReset() {
-  //   setStarted(false);
-  // }
-
   return (
     <>
       <img
