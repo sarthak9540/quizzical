@@ -1,34 +1,25 @@
-import { useEffect, useState } from "react";
 import Question from "./Question";
+import PropTypes from "prop-types";
 
-export default function Quiz() {
-  const [quizData, setQuizData] = useState([]);
-
-  useEffect(() => {
-    const controller = new AbortController();
-    async function getQuizData() {
-      const res = await fetch("https://opentdb.com/api.php?amount=5", {
-        signal: controller.signal,
-      });
-      const responseData = await res.json();
-      setQuizData(responseData.results);
-    }
-    getQuizData();
-    return () => controller.abort();
-  }, []);
-
-  console.log(quizData);
+export default function Quiz({ questionAnswers }) {
+  // console.log(quizData);
 
   return (
-    <section>
-      {quizData.map((value, index) => (
-        <Question
-          key={index}
-          question={value.question}
-          correctAnswer={value.correct_answer}
-          incorrectAnswers={value.incorrect_answers}
-        />
-      ))}
-    </section>
+    <main>
+      <section>
+        {questionAnswers.map((value, index) => (
+          <Question
+            key={index}
+            question={value.question}
+            answers={value.answers}
+          />
+        ))}
+      </section>
+      <button className="quiz-button">Check answers</button>
+    </main>
   );
 }
+
+Quiz.propTypes = {
+  questionAnswers: PropTypes.array.isRequired,
+};

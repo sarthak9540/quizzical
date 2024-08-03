@@ -31,15 +31,10 @@ h1 {
 }
 
 .start-button {
-  font-family: "Inter", sans-serif;
-  color: #f5f7fb;
   font-weight: 500;
   font-size: 1rem;
-  background-color: #4d5b9e;
-  padding: 16px 48px;
-  border: none;
-  border-radius: 15px;
   margin-top: 24px;
+  padding: 16px 48px;
 }
 
 .question {
@@ -51,6 +46,7 @@ h1 {
 form {
   margin: 16px 0px;
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
 }
 
@@ -70,4 +66,11 @@ label {
 
 hr {
   border: 1px solid #dbdef0;
+}
+
+.quiz-button {
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 16px 32px;
+  margin-top: 8px;
 }

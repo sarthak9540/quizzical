@@ -22,6 +22,11 @@ body {
 
 button {
   transition: opacity 0.25s;
+  font-family: "Inter", sans-serif;
+  color: #f5f7fb;
+  background-color: #4d5b9e;
+  border: none;
+  border-radius: 16px;
 }
 
 button:hover {
