@@ -25,6 +25,10 @@ export default function Quiz({ questionAnswers }) {
     setSubmitted(true);
   }
 
+  function refreshPage() {
+    window.location.reload();
+  }
+
   // console.log(questionAnswers);
   return (
     <main>
@@ -46,7 +50,9 @@ export default function Quiz({ questionAnswers }) {
           <p className="score-info">
             You scored {numberOfCorrect.current}/5 correct answers
           </p>
-          <button className="quiz-button">Play again</button>
+          <button onClick={refreshPage} className="quiz-button">
+            Play again
+          </button>
         </div>
       ) : (
         <button onClick={handleSubmit} className="quiz-button">
