@@ -51,7 +51,7 @@ function App() {
     <>
       <img
         className="blob-yellow"
-        src="src\assets\blob - yellow.png"
+        src="./assets/blob - yellow.png"
         alt="blob - yellow"
         style={yellowTransformStyles}
       />
@@ -62,7 +62,7 @@ function App() {
       )}
       <img
         className="blob-blue"
-        src="src\assets\blob - blue.png"
+        src="./assets/blob - blue.png"
         alt="blob - blue"
         style={blueTransformStyles}
       />
