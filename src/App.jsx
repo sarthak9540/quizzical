@@ -35,37 +35,17 @@ function App() {
     };
   });
 
-  const yellowTransformStyles = {
-    transform: started && "translate(30px,-30px)",
-  };
-
-  const blueTransformStyles = {
-    transform: started && "translate(-30px,30px)",
-  };
-
   function handleStart() {
     setStarted(true);
   }
 
   return (
     <>
-      <img
-        className="blob-yellow"
-        src="./assets/blob - yellow.png"
-        alt="blob - yellow"
-        style={yellowTransformStyles}
-      />
       {started ? (
         <Quiz questionAnswers={questionAnswers} />
       ) : (
         <CTA handleStart={handleStart} />
       )}
-      <img
-        className="blob-blue"
-        src="./assets/blob - blue.png"
-        alt="blob - blue"
-        style={blueTransformStyles}
-      />
     </>
   );
 }
